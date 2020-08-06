@@ -1,4 +1,4 @@
-package pl.smartdesign.recruitmentquestions.user;
+package pl.smartdesign.recruitmentquestions.auth.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

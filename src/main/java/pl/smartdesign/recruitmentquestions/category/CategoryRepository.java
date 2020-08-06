@@ -5,5 +5,5 @@ import org.springframework.stereotype.Repository;
 import pl.smartdesign.recruitmentquestions.category.model.Category;
 
 @Repository
-public interface CategoryRepository extends JpaRepository<Long, Category> {
+public interface CategoryRepository extends JpaRepository<Category, Long> {
 }

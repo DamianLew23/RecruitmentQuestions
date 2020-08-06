@@ -1,7 +1,7 @@
 package pl.smartdesign.recruitmentquestions.question.model;
 
 import pl.smartdesign.recruitmentquestions.category.model.Category;
-import pl.smartdesign.recruitmentquestions.user.User;
+import pl.smartdesign.recruitmentquestions.auth.model.User;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -12,11 +12,11 @@ public class Question {
 
     @Id
     private Long id;
-    private String content;
+    private String title;
     private String description;
     private LocalDate creationDate;
-    private Integer plusRate;
-    private Integer minusRate;
+    private Integer plusRate = 0;
+    private Integer minusRate = 0;
     @Enumerated(value = EnumType.STRING)
     private Level level;
     @ManyToOne
@@ -36,12 +36,12 @@ public class Question {
         this.id = id;
     }
 
-    public String getContent() {
-        return content;
+    public String getTitle() {
+        return title;
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public void setTitle(String content) {
+        this.title = content;
     }
 
     public String getDescription() {
